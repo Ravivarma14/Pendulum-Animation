@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#103A4D"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/container_1"
+        app:layout_constraintEnd_toStartOf="@id/container_2"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+    <ImageView
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pendulumString_1"
+        android:id="@+id/pendulumCircle_1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/pendulumString_1"
+        android:src="@drawable/pendulum_ball" />
+
+    <!-- String (Line) for Pendulum -->
+    <View
+        app:layout_constraintStart_toStartOf="@id/pendulumCircle_1"
+        app:layout_constraintEnd_toEndOf="@id/pendulumCircle_1"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/pendulumString_1"
+        android:layout_width="3dp"
+        android:layout_height="400dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="#FFFFFF"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/container_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    <ImageView
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pendulumString_2"
+        android:id="@+id/pendulumCircle_2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/pendulumString_2"
+        android:src="@drawable/pendulum_ball" />
+
+    <!-- String (Line) for Pendulum -->
+    <View
+        app:layout_constraintStart_toStartOf="@id/pendulumCircle_2"
+        app:layout_constraintEnd_toEndOf="@id/pendulumCircle_2"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/pendulumString_2"
+        android:layout_width="3dp"
+        android:layout_height="400dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="#FFFFFF"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/container_3"
+        app:layout_constraintStart_toEndOf="@id/container_2"
+        app:layout_constraintTop_toTopOf="parent">
+
+    <ImageView
+        app:layout_constraintTop_toBottomOf="@id/pendulumString_3"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/pendulumCircle_3"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/pendulumString_3"
+        android:src="@drawable/pendulum_ball" />
+
+    <!-- String (Line) for Pendulum -->
+    <View
+        app:layout_constraintStart_toStartOf="@id/pendulumCircle_3"
+        app:layout_constraintEnd_toEndOf="@id/pendulumCircle_3"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/pendulumString_3"
+        android:layout_width="3dp"
+        android:layout_height="400dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="#FFFFFF"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        app:layout_constraintBaseline_toTopOf="@id/timer_min_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/timer_instruction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/buttons_container"
+        android:text="Swipe up/down to set timer"
+        android:textSize="24sp"
+        android:textColor="#00FF00"
+        android:textStyle="bold" />
+
+    <TextView
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:clickable="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/timer_colon_text"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/timer_min_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/buttons_container"
+        android:text="00"
+        android:textSize="48sp"
+        android:textColor="#00FF00"
+        android:textStyle="bold" />
+
+
+    <TextView
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/timer_colon_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/buttons_container"
+        android:text=":"
+        android:textSize="48sp"
+        android:textColor="#00FF00"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:clickable="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/timer_colon_text"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/timer_sec_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/buttons_container"
+        android:text="00"
+        android:textSize="48sp"
+        android:textColor="#00FF00"
+        android:textStyle="bold" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/buttons_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:cardCornerRadius="30dp"
+            app:strokeWidth="0dp"
+            android:backgroundTint="#00FF00"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="center"
+                android:src="@drawable/play_arrow_48"
+                android:id="@+id/start_stop_iv"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
